@@ -1,0 +1,10 @@
+FROM ruby:2.5.1
+
+RUN gem install bundler
+
+WORKDIR /share
+ADD Gemfile /share/Gemfile
+ADD Gemfile.lock /share/Gemfile.lock
+RUN bundle install --with development
+
+ADD ./ /share
