@@ -2,7 +2,7 @@
 User.destroy_all
 
 10.times do
-  user = User.create!(name: Faker::FunnyName)
+  user = User.create!(name: Faker::FunnyName.name)
   5.times do
     Lesson.create!(description: BetterLorem.w, user: user)
   end

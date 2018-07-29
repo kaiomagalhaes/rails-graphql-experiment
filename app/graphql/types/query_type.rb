@@ -4,7 +4,13 @@ class Types::QueryType < Types::BaseObject
 
   field :lessons, [Types::LessonType], null: false
 
+  field :users, [Types::UserType], null: false
+
   def lessons
     Lesson.all
+  end
+
+  def users
+    User.all
   end
 end
