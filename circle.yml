@@ -19,7 +19,7 @@ test:
 
 deployment:
   dev:
-    branch: /^(?!(master|homolog|develop|qa)).*/
+    branch: master
     commands:
       - heroku maintenance:on --app rails-graphql-experiment
       - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
