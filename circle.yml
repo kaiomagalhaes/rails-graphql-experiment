@@ -15,7 +15,7 @@ database:
 test:
   override:
     - bundle exec rubocop
-    - bundle exec rspec
+    - bundle exec rails test
 
 deployment:
   dev:

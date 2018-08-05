@@ -34,6 +34,7 @@ group :development, :test do
   gem 'betterlorem'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
+  gem 'rubocop'
 end
 
 group :development do
