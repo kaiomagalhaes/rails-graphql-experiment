@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2018_07_29_144011) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "lessons", force: :cascade do |t|
     t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
@@ -26,4 +29,5 @@ ActiveRecord::Schema.define(version: 2018_07_29_144011) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "lessons", "users"
 end
