@@ -5,9 +5,7 @@ class Mutations::AddUser < Mutations::BaseMutation
 
 	def resolve(name:)
 		{
-			user: User.create!(
-				name: name,
-			)
+			user: Users::Lessons.create!(name)
 		}
 	end
 end
