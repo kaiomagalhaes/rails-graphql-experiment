@@ -6,7 +6,7 @@ class Mutations::AddLesson < Mutations::BaseMutation
 
 	def resolve(description:, user_id:)
 		{
-			lesson: Services::Lessons.create!(
+			lesson: Lessons.create!(
 				description,
 				user_id,
 			)
